@@ -16,7 +16,7 @@ class IntlTelInputWidget(forms.TextInput):
     input_type = 'tel'
 
     def __init__(self, attrs=None, allow_dropdown=True,
-                 preferred_countries=['us', 'gb'], default_code='us',
+                 preferred_countries=['us', 'gb'], only_countries=None, default_code='us',
                  use_default_init=True):
 
         self.use_default_init = use_default_init
@@ -27,6 +27,11 @@ class IntlTelInputWidget(forms.TextInput):
             'data-preferred-countries': json.dumps(preferred_countries),
             'data-default-code': default_code,
         }
+
+        if only_countries is not None:
+            final_attrs.update({
+                'data-only-countries': json.dumps(only_countries)
+            })
 
         if attrs is not None:
             final_attrs.update(attrs)
