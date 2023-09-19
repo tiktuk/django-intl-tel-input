@@ -114,6 +114,10 @@ Default: `'us'`
 Array of countries that will always appear at the top of the dropdown.
 Default: `['us', 'gb']`
 
+### only\_countries
+Limit which countries you want to show in the dropdown.
+Default: `None` (All countries will be shown.)
+
 ### use\_default\_init
 Use the provided init.js to initialize the plugin. Set this to `False` 
 if you want to provide your own initialization for the plugin. This is 
