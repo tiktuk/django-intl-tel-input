@@ -23,6 +23,7 @@
       },
       allowDropdown: data.allowDropdown !== undefined ? true : false,
       onlyCountries: data.onlyCountries,
+      hiddenInput: data.hiddenName
     };
 
     options.utilsScript = 'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js';
